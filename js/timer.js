@@ -24,8 +24,17 @@ const pomodoroTimer = {
     document.querySelector('#descanso').onclick = function(){
       pomodoro.descanso.apply(pomodoro);
     };
+    document.querySelector('#pausar').onclick = function(){
+      pomodoro.pausar.apply(pomodoro);
+    };
+    
   },
   
+  pausar: function(){
+    clearInterval(this.intervalo);
+    
+  },
+
  
   resetearVarieables: function(mins, secs, estado){
     this.minutos = mins;
@@ -74,8 +83,9 @@ const pomodoroTimer = {
   //inicio de descanso
   descanso: function() {
     this.resetearVarieables(5, 0, true);
-  }
+  },
   
+ 
 };
 
 pomodoroTimer.iniciarPomodoro();
