@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Título-->
+    <title>Pomodoro Timer</title>
+    <link rel="icon" href="icons/tomato.png">
+
+    <!--Metas-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pomodoro Timer</title>
-    <link rel="icon" href="icons/tomato.png">
+    
+    <!--CSS stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--CDN Google Fonts(fuentes)-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+    <!--CDN Fontawesome(iconos)-->
+    <script src="https://kit.fontawesome.com/afa329d86a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <input id="duration" value="30">
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
-    <script src="js/index.js"></script>
+
+  <h1>POMODORO TIMER</h1>
+
+  <!--Timer/Cronómetro-->
+  <div id="timer">
+    <!--Animación SVG-->
+    <svg id="circulo" height="550" width="550">
+      <circle 
+      r="250" 
+      cx="270" 
+      cy="270"
+      fill="transparent" 
+      stroke="white"
+      stroke-width="2"
+      transform="rotate(-90 270 270)"
+    >
+    </svg>
+    <!--Tiempo-->
+    <input id="duration" value="25">
+  </div>
+  
+  <!--Botones-->
+  <div id="botones">
+    <button id="info"><i class="fas fa-info-circle"></i></button>
+    <button id="start"><i class="fas fa-play"></i></button>
+    <button id="pause"><i class="fas fa-pause"></i></button>
+  </div>
+
+<!--  Modal -->
+<div id="modal" class="modal">
+    <!-- Contenido de la Modal -->
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <span class="close">&times;</span>
+      </div>
+
+      <div class="modal-body">
+        <p>La técnica pomodoro es una forma de administrar el tiempo de trabajo, planificar 
+        y ejecutar tareas para ser más productivo.</p>
+        <img src="info.png" alt="Instrucciones del Pomodoro">
+      </div>
+
+    </div><!-- Contenido de la Modal -->
+  </div><!--  Modal -->
+
+
+  <!--Scripts/JS-->
+  <script src="js/timer.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
