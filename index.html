@@ -3,7 +3,7 @@
 <head>
     <!--Título-->
     <title>Pomodoro Timer</title>
-    <link rel="icon" href="icons/tomato.png">
+    <link rel="icon" href="http://example.com/favicon.png">
 
     <!--Metas-->
     <meta charset="UTF-8">
@@ -24,7 +24,20 @@
 
   <h1>Pomodoro Timer</h1>
 
+  <!--Animación SVG-->
+  <svg id="circulo" height="550" width="550">
+    <circle 
+    r="250" 
+    cx="270" 
+    cy="270"
+    fill="transparent" 
+    stroke="white"
+    stroke-width="2"
+    transform="rotate(-90 270 270)"
+  >
+  </svg>
   <!--Timer-->
+  <div id="timer">
   <div id="app">
       <div id="timer">
           <span id="minutosDom">25</span>
@@ -33,11 +46,13 @@
       </div>
   
       <div id="botones">
-        <button id="nuevoPomodoro">Comenzar</button>
+        <button id="nuevoPomodoro" class="btn-2">Comenzar</button>
         <button id="descanso">Descanso</button>
         <button id="pausar">Pausar</button>
+        <button id="info"><img src="icons/info.png" alt="" srcset=""></button>
       </div>
   </div><!--Timer-->
+  
   
 <!--  Modal -->
 <div id="modal" class="modal">
@@ -51,7 +66,7 @@
       <div class="modal-body">
         <p>La técnica pomodoro es una forma de administrar el tiempo de trabajo, planificar 
         y ejecutar tareas para ser más productivo.</p>
-        <img src="info.png" alt="Instrucciones del Pomodoro">
+        <img src="modal.png" alt="Instrucciones del Pomodoro">
       </div>
 
     </div><!-- Contenido de la Modal -->

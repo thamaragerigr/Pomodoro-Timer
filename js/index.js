@@ -1,4 +1,3 @@
-
 //MODAL BOX
 const modal = document.getElementById("modal");
 const info = document.getElementById("info");
