@@ -26,6 +26,7 @@ h1{
 /*-------------------------------------------*\
     TIMER
 \*-------------------------------------------*/
+  /*estilo de svg*/
 #circulo{
   margin: 0;
   position: absolute;
@@ -34,6 +35,13 @@ h1{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+#circulo circle{
+  -webkit-box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
+-moz-box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
+box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
+}
+
 
 #timer{
   /*texto*/
@@ -45,10 +53,12 @@ h1{
   width: 550px;
   height: 300px;
   border: none;
-  margin: 0px auto 20px auto;
+  margin: 0px auto 5px auto;
   padding-top: 80px;
 }
 
+
+/*botones generales*/
 #botones{
   text-align: center;
 }
@@ -61,18 +71,35 @@ h1{
   /*general*/
   background-color: transparent;
   border: none;   
-  margin: 0 20px;
+  margin: 0 10px;
   cursor: pointer;
   vertical-align: middle;
-
 }
-
 
 #botones button:focus {
   outline:0;
 }
 
 
+/*botones 'comenzar' y 'descanso'*/
+#botones .efecto-botones{
+  /*general*/
+  padding: 5px;
+  border-radius: 3px;
+   /*background*/
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)), linear-gradient(transparent, transparent);
+  background-size: 0px 1px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-out;
+}
+
+#botones .efecto-botones:hover{
+  background-size: 100% 1px, auto;
+}
+
+
+/*boton de informacion*/
 #info{
   position: absolute;
   bottom: 30px;
@@ -141,11 +168,12 @@ h1{
   font-size: 28px;
   font-weight: bold;
   float: right;
+  padding: 10px;
 }
   
 .close:hover,
 .close:focus {
-  color: #000;
+  color: rgb(117, 117, 117);
   text-decoration: none;
   cursor: pointer;
   transition: .4s;
