@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!--CDN Google Fonts(fuentes)-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300&display=swap" rel="stylesheet">
 
     <!--CDN Fontawesome(iconos)-->
     <script src="https://kit.fontawesome.com/afa329d86a.js" crossorigin="anonymous"></script>
@@ -22,33 +22,22 @@
 
 <body>
 
-  <h1>POMODORO TIMER</h1>
+  <h1>Pomodoro Timer</h1>
 
-  <!--Timer/Cronómetro-->
-  <div id="timer">
-    <!--Animación SVG-->
-    <svg id="circulo" height="550" width="550">
-      <circle 
-      r="250" 
-      cx="270" 
-      cy="270"
-      fill="transparent" 
-      stroke="white"
-      stroke-width="2"
-      transform="rotate(-90 270 270)"
-    >
-    </svg>
-    <!--Tiempo-->
-    <input id="duration" value="25">
-  </div>
+  <!--Timer-->
+  <div id="app">
+      <div id="timer">
+          <span id="minutosDom">25</span>
+          <span id="colon">:</span>
+          <span id="segundosDom">00</span>
+      </div>
   
-  <!--Botones-->
-  <div id="botones">
-    <button id="info"><i class="fas fa-info-circle"></i></button>
-    <button id="start"><i class="fas fa-play"></i></button>
-    <button id="pause"><i class="fas fa-pause"></i></button>
-  </div>
-
+      <div id="botones">
+        <button id="nuevoPomodoro">Pomodoro</button>
+        <button id="descanso">Descanso</button>
+      </div>
+  </div><!--Timer-->
+  
 <!--  Modal -->
 <div id="modal" class="modal">
     <!-- Contenido de la Modal -->

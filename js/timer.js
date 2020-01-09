@@ -1,56 +1,81 @@
-class Timer {
-    constructor(durationInput, startButton, pauseButton, callbacks){
-       //input de tiempo 
-       this.durationInput = durationInput;
-       //botón de inicio
-       this.startButton = startButton;
-       //botón de pausa
-       this.pauseButton = pauseButton;
+const pomodoroTimer = {
+  //tiempo contado
+  minutos : 0,
+  segundos : 0,
+  
+  //tiempo en el #timer 
+  minutosDom : null,
+  segundosDom : null,
 
-       if(callbacks){
-           this.onStart = callbacks.onStart;
-           this.onTick = callbacks.onTick;
-           this.onComplete = callbacks.onComplete;
-       }
+  intervalo : null,
+  estado : false,
+  
+  //inicio general
+  iniciarPomodoro: function(){
+    const pomodoro = this;
+    this.minutosDom = document.querySelector('#minutosDom');
+    this.segundosDom = document.querySelector('#segundosDom');
+    this.intervalo = setInterval(function(){
+      pomodoro.intervalCallback.apply(pomodoro);
+    }, 1000);
+    document.querySelector('#nuevoPomodoro').onclick = function(){
+      pomodoro.nuevoPomodoro.apply(pomodoro);
+    };
+    document.querySelector('#descanso').onclick = function(){
+      pomodoro.descanso.apply(pomodoro);
+    };
+  },
+  
+ 
+  resetearVarieables: function(mins, secs, estado){
+    this.minutos = mins;
+    this.segundos = secs;
+    this.estado = estado;
+  },
 
-       this.startButton.addEventListener('click', this.start);
-       this.pauseButton.addEventListener('click', this.pause);
+  toDoubleDigit: function(num){
+    if(num < 10) {
+      return "0" + parseInt(num, 10);
+    }
+    return num;
+  },
+
+  updateDom: function(){
+    this.minutosDom.innerHTML = this.toDoubleDigit(this.minutos);
+    this.segundosDom.innerHTML = this.toDoubleDigit(this.segundos);
+  },
+
+  intervalCallback: function(){
+    if(!this.estado) {
+      return false;
     }
 
-    //comienzo del timer
-    start = () => {
-      if (this.onStart){
-        this.onStart(this.timeRemaining);
-      }  
-      this.tick();
-      this.interval = setInterval(this.tick, 50);
-    };
-
-    //pausa del timer
-    pause = () => {
-      clearInterval(this.interval);
-    };
-
-    //contador de segundos
-    tick = () => {
-      if(this.timeRemaining <= 0 ){
-         this.pause();
-         if(this.onComplete){
-            this.onComplete();
-         }
-       } else {
-        this.timeRemaining = this.timeRemaining - .5;
-        if(this.onTick){
-           this.onTick(this.timeRemaining);
-        }
-       }
-    };
-
-    get timeRemaining(){
-        return parseFloat(this.durationInput.value);
+    if(this.segundos == 0) {
+      if(this.minutos == 0) {
+        this.timerComplete();
+        return;
+      }
+      this.segundos = 59;
+      this.minutos--;
+    } else {
+      this.segundos--;
     }
+    this.updateDom();
+  },
 
-    set timeRemaining(time){
-        this.durationInput.value = time.toFixed(2);
-    }
-}
+  timerComplete: function(){
+    console.log('Completado!')
+  },
+
+  //inicio de pomodoro
+  nuevoPomodoro: function() {
+    this.resetearVarieables(25, 0, true);
+  },
+  //inicio de descanso
+  descanso: function() {
+    this.resetearVarieables(5, 0, true);
+  }
+  
+};
+
+pomodoroTimer.iniciarPomodoro();
