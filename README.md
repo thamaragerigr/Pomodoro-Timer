@@ -6,5 +6,6 @@
    
    El éxito de esta técnica de estudio es que hace más llevadera la tarea que tenemos entre manos y además nos permite saber el tiempo real que nos lleva cada cosa, llegando a ser más conscientes de cómo empleamos nuestro tiempo.
    
-![alt test](screenshots/screenshot(1))
-![alt test](screenshots/screenshot(2))
+![Captura de Pantalla](screenshots/screenshot(1).png)
+
+![Captura de Pantalla](screenshots/screenshot(2).png)
