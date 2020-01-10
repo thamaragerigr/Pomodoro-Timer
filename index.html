@@ -24,23 +24,23 @@
 
   <h1>Pomodoro Timer</h1>
 
-  <!--Animación SVG-->
-  <svg id="circulo" height="550" width="550">
+  <!--Circulo svg-->
+  <svg id="circulo" class="light-bulb theme-color-one" height="500" width="500">
     <circle 
     r="250" 
-    cx="270" 
-    cy="270"
+    cx="290" 
+    cy="250"
     fill="transparent" 
     stroke="white"
-    stroke-width="2"
-    transform="rotate(-90 270 270)"
-  >
+    stroke-width="4"
+    transform="rotate(-90 270 270)">
   </svg>
+
   <!--Timer-->
   <div id="timer">
   <div id="app">
       <div id="timer">
-          <span id="minutosDom">25</span>
+          <span id="minutosDom">00</span>
           <span id="colon">:</span>
           <span id="segundosDom">00</span>
       </div>
@@ -48,7 +48,7 @@
       <div id="botones">
         <button id="nuevoPomodoro" class="efecto-botones">Comenzar</button>
         <button id="descanso" class="efecto-botones">Descanso</button>
-        <!-- <button id="pausar">Pausar</button> -->
+        <button id="reiniciar" class="efecto-botones">Reiniciar</button>
         <button id="info"><img src="icons/info.png" alt="" srcset=""></button>
       </div>
   </div><!--Timer-->

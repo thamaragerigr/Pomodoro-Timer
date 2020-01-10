@@ -5,44 +5,57 @@
 \*-------------------------------------------*/
 body{
   /*general*/
-  background: linear-gradient(337deg, #ff0000 18%, #fcb045 100%);
+  background: linear-gradient(337deg, #ff0000 30%, #fcb045 100%);
   background-size: 400% 400%;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   /*animaciones*/
   animation: rainbow 7s ease infinite;
   -webkit-animation: rainbow 7s ease infinite;
-  -z-animation: rainbow 7s ease infinite;
+  -moz-animation: rainbow 7s ease infinite;
   -o-animation: rainbow 7s ease infinite;
+  -ms-animation: rainbow 7s ease infinite;
 }
 
 h1{
-  color: white;
+  color: #ffffff;
   font-size: 55px;
   font-weight: 100;
-  letter-spacing: -4px;
+  letter-spacing: -5px;
   text-align: center;
+  margin-bottom: -5px;
 }
+
+
+/*-------------------------------------------*\
+    SVG/CIRCULO
+\*-------------------------------------------*/
+/*estilo de svg*/
+#circulo{
+  border-radius: 270px;
+  margin: 0;
+  margin-top: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+}
+
+/*animacion de svg*/
+.glow{
+  animation:pulse 1s infinite alternate;
+  -webkit-animation:pulse 1s infinite alternate;
+  -moz-animation:pulse 1s infinite alternate;
+  -o-animation:pulse 1s infinite alternate;
+  -ms-animation:pulse 1s infinite alternate;
+}
+
 
 /*-------------------------------------------*\
     TIMER
 \*-------------------------------------------*/
-  /*estilo de svg*/
-#circulo{
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#circulo circle{
-  -webkit-box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
--moz-box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
-box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
-}
-
-
 #timer{
   /*texto*/
   color: white;
@@ -54,10 +67,13 @@ box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
   height: 300px;
   border: none;
   margin: 0px auto 5px auto;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 
+/*-------------------------------------------*\
+    BOTONES
+\*-------------------------------------------*/
 /*botones generales*/
 #botones{
   text-align: center;
@@ -80,8 +96,6 @@ box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
   outline:0;
 }
 
-
-/*botones 'comenzar' y 'descanso'*/
 #botones .efecto-botones{
   /*general*/
   padding: 5px;
@@ -98,17 +112,17 @@ box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
   background-size: 100% 1px, auto;
 }
 
-
 /*boton de informacion*/
 #info{
   position: absolute;
-  bottom: 30px;
+  top: 30px;
   right: 30px;
 }
 
 #info img{
   width: 50px;
 }
+
 
 /*-------------------------------------------*\
     MODAL BOX
@@ -141,10 +155,11 @@ box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
   position: relative;
   top: 100px;
   /*animacion*/
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: arriba;
-  animation-duration: 0.4s;
+  animation: arriba .4s ease;
+  -webkit-animation: arriba .4s ease;
+  -moz-animation: arriba .4s ease;
+  -o-animation: arriba .4s ease;
+  -ms-animation: arriba .4s ease;
 }
   
 .modal-content p{
@@ -197,17 +212,34 @@ box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
 \*-------------------------------------------*/
 
 /* modal box */
-@-webkit-keyframes arriba {
-  from {top:-400px; opacity:0} 
-  to {top:100px; opacity:1}
-}
-  
 @keyframes arriba {
   from {top:-400px; opacity:0}
   to {top:100px; opacity:1}
 }
+@-webkit-keyframes arriba {
+  from {top:-400px; opacity:0} 
+  to {top:100px; opacity:1}
+}
+@-moz-keyframes arriba {
+  from {top:-400px; opacity:0} 
+  to {top:100px; opacity:1}
+}
+@-o-keyframes arriba {
+  from {top:-400px; opacity:0} 
+  to {top:100px; opacity:1}
+}
+@-ms-keyframes arriba {
+  from {top:-400px; opacity:0} 
+  to {top:100px; opacity:1}
+}
+  
   
  /*background*/
+ @keyframes rainbow { 
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
  @-webkit-keyframes rainbow {
   0%{background-position:0% 82%}
   50%{background-position:100% 19%}
@@ -223,8 +255,33 @@ box-shadow: inset 10px 10px 5px -5px rgba(0,0,0,0.08);
   50%{background-position:100% 19%}
   100%{background-position:0% 82%}
 }
-@keyframes rainbow { 
+@-ms-keyframes rainbow { 
   0%{background-position:0% 82%}
   50%{background-position:100% 19%}
   100%{background-position:0% 82%}
 }
+
+
+ /*Animacion de timer*/
+ @keyframes pulse {
+  0% {box-shadow:0 0 10px #ffffffc9;}
+  100% {box-shadow:0 0 40px #ffffffd2;}
+}
+@-webkit-keyframes pulse {
+  0% {box-shadow:0 0 10px #ffffffc9;}
+  100% {box-shadow:0 0 40px #ffffffd2;}
+}
+@-moz-keyframes pulse {
+  0% {box-shadow:0 0 10px #ffffffc9;}
+  100% {box-shadow:0 0 40px #ffffffd2;}
+}
+@-o-keyframes pulse {
+  0% {box-shadow:0 0 10px #ffffffc9;}
+  100% {box-shadow:0 0 40px #ffffffd2;}
+}
+@-ms-keyframes pulse {
+  0% {box-shadow:0 0 10px #ffffffc9;}
+  100% {box-shadow:0 0 40px #ffffffd2;}
+}
+
+
