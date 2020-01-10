@@ -84,6 +84,7 @@ h1{
   color: white;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 20px;
+  letter-spacing: -1px;
   /*general*/
   background-color: transparent;
   border: none;   
