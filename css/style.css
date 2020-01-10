@@ -6,7 +6,7 @@
 body{
   /*general*/
   background: linear-gradient(337deg, #ff0000 30%, #fcb045 100%);
-  background-size: 500% 500%;
+  background-size: 800% 800%;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   /*animaciones*/
   animation: rainbow 7s ease infinite;
@@ -66,7 +66,7 @@ h1{
   width: 550px;
   height: 300px;
   border: none;
-  margin: 0px auto 5px auto;
+  margin: 0px auto -40px auto;
   padding-top: 80px;
 }
 
@@ -120,7 +120,7 @@ h1{
 }
 
 #info img{
-  width: 50px;
+  width: 40px;
 }
 
 
@@ -153,7 +153,7 @@ h1{
   border-radius: 4px;
   /*posicion*/
   position: relative;
-  top: 80px;
+  top: 60px;
   /*animacion*/
   animation: arriba .4s ease;
   -webkit-animation: arriba .4s ease;
@@ -214,23 +214,23 @@ h1{
 /* modal box */
 @keyframes arriba {
   from {top:-400px; opacity:0}
-  to {top:80px; opacity:1}
+  to {top:60px; opacity:1}
 }
 @-webkit-keyframes arriba {
   from {top:-400px; opacity:0} 
-  to {top:80px; opacity:1}
+  to {top:60px; opacity:1}
 }
 @-moz-keyframes arriba {
   from {top:-400px; opacity:0} 
-  to {top:80px; opacity:1}
+  to {top:60px; opacity:1}
 }
 @-o-keyframes arriba {
   from {top:-400px; opacity:0} 
-  to {top:80px; opacity:1}
+  to {top:60px; opacity:1}
 }
 @-ms-keyframes arriba {
   from {top:-400px; opacity:0} 
-  to {top:80px; opacity:1}
+  to {top:60px; opacity:1}
 }
   
   
