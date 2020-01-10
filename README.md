@@ -4,7 +4,7 @@
 
    Aplicación para cronometrar intervalos de trabajo/estudio de 25min y descansos de 5min con el objetivo de mejorar la productividad: https://thamaragerigr.github.io/Pomodoro-Timer/
 
-   ![Captura de Pantalla](screenshots/screenshot(1).png)
+   ![Captura de Pantalla](screenshots/screenshot(3).png)
 
 
    El método Pomodoro es básicamente una herramienta para conseguir que se logren tantas tareas como sea posible en la menor cantidad de tiempo. Facilita la gestión y organización del tiempo que se dedica a cada tarea. 
