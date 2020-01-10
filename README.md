@@ -2,7 +2,7 @@
 
    ![Captura de Pantalla](screenshots/screenshot(2).png)
 
-   Aplicación para cronometrar intervalos de trabajo/estudio de 25min y descansos de 5min con el objetivo de mejorar la productividad: https://thamaragerigr.github.io/Timer-App/
+   Aplicación para cronometrar intervalos de trabajo/estudio de 25min y descansos de 5min con el objetivo de mejorar la productividad: https://thamaragerigr.github.io/Pomodoro-Timer/
 
    ![Captura de Pantalla](screenshots/screenshot(1).png)
 
