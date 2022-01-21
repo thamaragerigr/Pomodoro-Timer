@@ -22,10 +22,10 @@ const pomodoroTimer = {
     document.querySelector('#newPomodoro').onclick = function(){
       pomodoro.newPomodoro.apply(pomodoro);
     };
-    document.querySelector('#descanso').onclick = function(){
+    document.querySelector('#rest').onclick = function(){
       pomodoro.descanso.apply(pomodoro);
     };
-    document.querySelector('#reiniciar').onclick = function(){
+    document.querySelector('#reset').onclick = function(){
       pomodoro.reiniciar.apply(pomodoro);
     };
     
